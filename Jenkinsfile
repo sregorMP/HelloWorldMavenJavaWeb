@@ -13,6 +13,10 @@ pipeline {
         sh 'pwd'
       }
     }
+    stage('Deploy') {
+      steos {
+       sh 'whoami'
+      } 
 
   }
 }
