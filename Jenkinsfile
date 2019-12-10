@@ -13,11 +13,18 @@ pipeline {
         sh 'pwd'
       }
     }
+
+    stage('Aprovação') {
+      steps {
+        input 'Aprova o deploy?'
+      }
+    }
+
     stage('Deploy') {
       steps {
-       sh 'whoami'
-      } 
+        sh 'echo "fazendo deploy"'
+      }
+    }
 
   }
-}
 }
