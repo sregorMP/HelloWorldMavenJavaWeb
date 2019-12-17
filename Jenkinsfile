@@ -14,5 +14,12 @@ pipeline {
       }
     }
 
+    stage('Aprovação') {
+      steps {
+        input 'Aprova?'
+        sh 'echo "ok"'
+      }
+    }
+
   }
 }
